@@ -1,0 +1,2 @@
+l=["DISHITA","VANSHITA","SHAURYA","KUHU","AAYUSH","ARYAVEER"
+print(l[::-1])

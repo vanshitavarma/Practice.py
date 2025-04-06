@@ -1,0 +1,21 @@
+# Taking input as lists
+cet_students = list(input("Enter students appearing for CET (comma-separated): ").split(","))
+jee_students = list(input("Enter students appearing for JEE (comma-separated): ").split(","))
+neet_students = list(input("Enter students appearing for NEET (comma-separated): ").split(","))
+
+# Converting lists to sets (removes duplicates)
+cet_students = {student.strip().title() for student in cet_students}
+jee_students = {student.strip().title() for student in jee_students}
+neet_students = {student.strip().title() for student in neet_students}
+
+# Performing set operations
+all_students = cet_students | jee_students | neet_students  # Union
+common_students = cet_students & jee_students & neet_students  # Intersection
+cet_only = cet_students - (jee_students | neet_students)  # Students only in CET
+jee_neet_common = jee_students & neet_students  # Students in both JEE and NEET
+
+# Display results
+print("\nAll unique students appearing for at least one exam:", sorted(all_students) if all_students else "None")
+print("\nStudents appearing for all three exams (CET, JEE, NEET):", sorted(common_students) if common_students else "None")
+print("\nStudents appearing only for CET:", sorted(cet_only) if cet_only else "None")
+print("\nStudents appearing for both JEE and NEET:", sorted(jee_neet_common) if jee_neet_common else "None")

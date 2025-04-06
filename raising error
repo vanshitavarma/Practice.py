@@ -1,0 +1,5 @@
+a=input("Enter any word: ")
+if(f"{a}"=="quit"):
+   print("wow thats great!!")
+else:
+   raise ValueError("no this is the wrong string ")

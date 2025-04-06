@@ -1,0 +1,9 @@
+l=[11,52,66,25,89]
+print(l)
+l.append(7)
+print(l)
+l.sort()
+print(l)
+l.sort(reverse=True)
+print(l)
+print(l.index(89))
